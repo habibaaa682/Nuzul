@@ -8,9 +8,17 @@ class SplachViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(Assets.assetsImagesImage),
-        SvgPicture.asset(Assets.assetsImagesName),
+        SvgPicture.asset(
+          Assets.assetsImagesImage,
+          width: MediaQuery.of(context).size.width * 0.4,
+        ),
+        const SizedBox(height: 20),
+        SvgPicture.asset(
+          Assets.assetsImagesName,
+          width: MediaQuery.of(context).size.width * 0.3,
+        ),
       ],
     );
   }
