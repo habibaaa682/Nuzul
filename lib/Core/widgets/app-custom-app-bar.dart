@@ -13,7 +13,7 @@ AppBar BuildAppBar(context, {required String title}) {
         },
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Icon(Icons.arrow_forward_ios, color: AppColors.accent),
+          child: Icon(Icons.arrow_forward_ios, color: AppColors.textDark),
         ),
       ),
     ],
@@ -21,7 +21,7 @@ AppBar BuildAppBar(context, {required String title}) {
     title: Text(
       'Login',
       textAlign: TextAlign.center,
-      style: TextStyles.bold19.copyWith(color: AppColors.accent),
+      style: TextStyles.bold19.copyWith(color: AppColors.textDark),
     ),
   );
 }

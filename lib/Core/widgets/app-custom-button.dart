@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nuzul/Core/utiles/app-text-styles.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
@@ -9,6 +10,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 48,
+      width: double.infinity,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
@@ -19,7 +22,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: const TextStyle(fontSize: 16.0, color: Colors.white),
+          style: TextStyles.bold16.copyWith(color: AppColors.beigeLight),
         ),
       ),
     );
