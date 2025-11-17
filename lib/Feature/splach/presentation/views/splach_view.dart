@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
+import 'package:nuzul/Feature/Login/views/login-view.dart';
 import 'package:nuzul/Feature/onBoarding/presentation/views/on-boarding-view.dart';
 import 'package:nuzul/Feature/splach/presentation/widgets/splash-view-body.dart';
+import 'package:nuzul/constants.dart';
 
 class SplachView extends StatefulWidget {
   const SplachView({super.key});
@@ -23,8 +26,16 @@ class _SplachViewState extends State<SplachView> {
   }
 
   void navigateToOnBoarding() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, OnBoardingView.routename);
+    bool kIsOnBoardingViewSeen = SharedPreferencesSingleton.getBool(
+      isOnBoardingViewSeen,
+    );
+
+    Future.delayed(const Duration(seconds: 1), () {
+      if (kIsOnBoardingViewSeen) {
+        Navigator.pushReplacementNamed(context, LoginView.routename);
+      } else {
+        Navigator.pushReplacementNamed(context, OnBoardingView.routename);
+      }
     });
   }
 }

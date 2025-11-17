@@ -14,9 +14,10 @@ class SplachViewBody extends StatelessWidget {
           Assets.assetsImagesImage,
           width: MediaQuery.of(context).size.width * 0.4,
         ),
-        const SizedBox(height: 20),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.05),
         SvgPicture.asset(
           Assets.assetsImagesName,
+          fit: BoxFit.fill,
           width: MediaQuery.of(context).size.width * 0.3,
         ),
       ],

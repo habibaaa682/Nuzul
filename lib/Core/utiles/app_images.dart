@@ -20,5 +20,5 @@ class Assets {
 
   /// Assets for assetsImagesWelcome
   /// assets/images/Welcome.svg
-  static const String assetsImagesWelcome = "assets/images/welcome.png";
+  static const String assetsImagesWelcome = "assets/images/Welcome.png";
 }
