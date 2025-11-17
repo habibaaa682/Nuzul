@@ -4,12 +4,19 @@ import 'package:nuzul/Core/utiles/app_colors.dart';
 
 AppBar BuildAppBar(context, {required String title}) {
   return AppBar(
-    leading: GestureDetector(
-      onTap: () {
-        Navigator.pop(context);
-      },
-      child: Icon(Icons.arrow_back_ios_new, color: AppColors.accent),
-    ),
+    backgroundColor: Colors.white,
+    automaticallyImplyLeading: false,
+    actions: [
+      GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Icon(Icons.arrow_forward_ios, color: AppColors.accent),
+        ),
+      ),
+    ],
     centerTitle: true,
     title: Text(
       'Login',

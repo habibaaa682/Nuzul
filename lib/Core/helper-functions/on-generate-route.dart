@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nuzul/Feature/Login/views/login-view.dart';
+import 'package:nuzul/Feature/Login/presentation/views/login-view.dart';
 import 'package:nuzul/Feature/onBoarding/presentation/views/on-boarding-view.dart';
 import 'package:nuzul/Feature/splach/presentation/views/splach_view.dart';
 

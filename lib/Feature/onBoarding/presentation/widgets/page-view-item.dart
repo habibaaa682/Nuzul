@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
 import 'package:nuzul/Core/utiles/app-text-styles.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
-import 'package:nuzul/Feature/Login/views/login-view.dart';
+import 'package:nuzul/Feature/Login/presentation/views/login-view.dart';
 import 'package:nuzul/constants.dart';
 
 class PageViewItem extends StatelessWidget {
