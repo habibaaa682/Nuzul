@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/helper-functions/on-generate-route.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
+import 'package:nuzul/Core/utiles/app_colors.dart';
 import 'Feature/splach/presentation/views/splach_view.dart';
 
 void main() async {
@@ -14,7 +15,11 @@ class Nuzul extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Cairo'),
+      theme: ThemeData(
+        fontFamily: 'Cairo',
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.beige),
+      ),
       onGenerateRoute: onGenerateRoute,
       initialRoute: SplachView.routename,
       debugShowCheckedModeBanner: false,

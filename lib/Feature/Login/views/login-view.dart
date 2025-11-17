@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nuzul/Core/widgets/app-custom-app-bar.dart';
+import 'package:nuzul/Feature/Login/views/login-view-body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -6,6 +8,9 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Scaffold(
+      appBar: BuildAppBar(context, title: 'Login'),
+      body: LoginViewBody(),
+    );
   }
 }
