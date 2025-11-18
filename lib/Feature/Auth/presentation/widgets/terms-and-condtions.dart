@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/utiles/app-text-styles.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/custom-checkbox.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/custom-checkbox.dart';
 
 class TermsAndCondtions extends StatefulWidget {
   const TermsAndCondtions({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/utiles/app-text-styles.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
-import 'package:nuzul/Feature/Login/presentation/views/sign-up-view.dart';
+import 'package:nuzul/Feature/Auth/presentation/views/sign-up-view.dart';
 
 class DontHaveAnAccountWidget extends StatelessWidget {
   const DontHaveAnAccountWidget({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/widgets/app-custom-button.dart';
 import 'package:nuzul/Core/widgets/app-custom-text-field.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/have-anaccount-widget.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/terms-and-condtions.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/have-anaccount-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/terms-and-condtions.dart';
 
 class SignUpBody extends StatelessWidget {
   const SignUpBody({super.key});

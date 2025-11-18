@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:nuzul/Core/utiles/app_images.dart';
 import 'package:nuzul/Core/widgets/app-custom-button.dart';
 import 'package:nuzul/Core/widgets/app-custom-text-field.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/dont-have-account-widget.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/forgot-password-widget.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/or-divider-widget.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/social-custom-button-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/dont-have-account-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/forgot-password-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/or-divider-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/social-custom-button-widget.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});

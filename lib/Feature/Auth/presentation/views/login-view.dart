@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/widgets/app-custom-app-bar.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/login-view-body.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/login-view-body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
-import 'package:nuzul/Feature/Login/presentation/views/login-view.dart';
+import 'package:nuzul/Feature/Auth/presentation/views/login-view.dart';
 import 'package:nuzul/Feature/onBoarding/presentation/views/on-boarding-view.dart';
 import 'package:nuzul/Feature/splach/presentation/widgets/splash-view-body.dart';
 import 'package:nuzul/constants.dart';

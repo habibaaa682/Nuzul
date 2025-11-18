@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/widgets/app-custom-app-bar.dart';
-import 'package:nuzul/Feature/Login/presentation/widgets/sign-up-body-widget.dart';
+import 'package:nuzul/Feature/Auth/presentation/widgets/sign-up-body-widget.dart';
 
 class SignUpView extends StatelessWidget {
   static const String routename = 'signup';

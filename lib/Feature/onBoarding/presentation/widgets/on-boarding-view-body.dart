@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
 import 'package:nuzul/Core/widgets/app-custom-button.dart';
-import 'package:nuzul/Feature/Login/presentation/views/login-view.dart';
+import 'package:nuzul/Feature/Auth/presentation/views/login-view.dart';
 import 'package:nuzul/Feature/onBoarding/presentation/widgets/on-boarding-page-view.dart';
 import 'package:nuzul/constants.dart';
 
