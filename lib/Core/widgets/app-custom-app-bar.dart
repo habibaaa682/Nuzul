@@ -19,7 +19,7 @@ AppBar BuildAppBar(context, {required String title}) {
     ],
     centerTitle: true,
     title: Text(
-      'Login',
+      title,
       textAlign: TextAlign.center,
       style: TextStyles.bold19.copyWith(color: AppColors.textDark),
     ),
