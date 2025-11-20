@@ -1,5 +1,7 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/helper-functions/on-generate-route.dart';
+import 'package:nuzul/Core/services/custom-bloc-observer.dart';
 import 'package:nuzul/Core/services/get_it-service.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
@@ -9,6 +11,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesSingleton.init();
   setupGetIt();
+  Bloc.observer = CustomBlocObserver();
   runApp(const Nuzul());
 }
 
