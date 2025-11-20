@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuzul/Core/helper-functions/on-generate-route.dart';
+import 'package:nuzul/Core/services/get_it-service.dart';
 import 'package:nuzul/Core/services/shared-prefrences-singleton.dart';
 import 'package:nuzul/Core/utiles/app_colors.dart';
 import 'Feature/splach/presentation/views/splach_view.dart';
@@ -7,6 +8,7 @@ import 'Feature/splach/presentation/views/splach_view.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesSingleton.init();
+  setupGetIt();
   runApp(const Nuzul());
 }
 
