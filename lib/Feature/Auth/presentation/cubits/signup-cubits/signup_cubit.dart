@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:nuzul/Core/errors/error-formatter.dart';
 import 'package:nuzul/Feature/Auth/domain/entities/user-entity.dart';
 import 'package:nuzul/Feature/Auth/domain/repos/auth-repo.dart';
 
@@ -29,7 +30,7 @@ class SignupCubit extends Cubit<SignupState> {
       userType,
     );
     result.fold(
-      (failure) => emit(SignupFailure(failure.toString())),
+      (failure) => emit(SignupFailure(ErrorFormatter.format(failure.message))),
       (user) => emit(SignupSuccess(user: user)),
     );
   }

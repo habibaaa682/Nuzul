@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:nuzul/Core/errors/failure.dart';
 import 'package:nuzul/Core/services/api-services.dart';
@@ -39,6 +41,7 @@ class AuthRepoImpl extends AuthRepo {
 
       return Right(UserModel.fromJson(response));
     } catch (e) {
+      log({'AuthRepoImpl Signup Error:': e.toString()}.toString());
       return Left(ServerFailure(e.toString()));
     }
   }
