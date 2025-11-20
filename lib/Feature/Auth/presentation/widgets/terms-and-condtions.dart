@@ -4,7 +4,8 @@ import 'package:nuzul/Core/utiles/app_colors.dart';
 import 'package:nuzul/Feature/Auth/presentation/widgets/custom-checkbox.dart';
 
 class TermsAndCondtions extends StatefulWidget {
-  const TermsAndCondtions({super.key});
+  const TermsAndCondtions({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
 
   @override
   State<TermsAndCondtions> createState() => _TermsAndCondtionsState();
@@ -21,6 +22,7 @@ class _TermsAndCondtionsState extends State<TermsAndCondtions> {
         CustomCheckBox(
           onChanged: (value) {
             isTermsAccepted = value;
+            widget.onChanged(value);
             setState(() {});
           },
           isChecked: isTermsAccepted,

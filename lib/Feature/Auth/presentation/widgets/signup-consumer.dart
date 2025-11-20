@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:nuzul/Core/helper-functions/build-error-bar.dart';
 import 'package:nuzul/Feature/Auth/presentation/cubits/signup-cubits/signup_cubit.dart';
 import 'package:nuzul/Feature/Auth/presentation/widgets/sign-up-body-widget.dart';
 
@@ -15,9 +16,7 @@ class SignUpViewBlocConsumer extends StatelessWidget {
           Navigator.of(context).pop();
         }
         if (state is SignupFailure) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(state.errorMessage)));
+          buildErrorBar(context, state.errorMessage);
         }
       },
       builder: (BuildContext context, state) {

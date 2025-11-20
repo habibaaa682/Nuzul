@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nuzul/Core/helper-functions/build-error-bar.dart';
 import 'package:nuzul/Core/widgets/app-custom-button.dart';
+import 'package:nuzul/Core/widgets/app-custom-password-field.dart';
 import 'package:nuzul/Core/widgets/app-custom-text-field.dart';
 import 'package:nuzul/Feature/Auth/presentation/cubits/signup-cubits/signup_cubit.dart';
 import 'package:nuzul/Feature/Auth/presentation/widgets/have-anaccount-widget.dart';
@@ -17,6 +19,7 @@ class _SignUpBodyState extends State<SignUpBody> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   late String firstName, lastName, userName, password, email, phoneNumber;
+  late bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -68,21 +71,21 @@ class _SignUpBodyState extends State<SignUpBody> {
                   },
                 ),
                 SizedBox(height: 24),
-                CustomTextFormField(
-                  hintText: 'Password',
-                  keyboardType: TextInputType.visiblePassword,
+                CustomPasswordField(
                   onSaved: (value) {
                     password = value!;
                   },
-                  suffixIcon: Icon(
-                    Icons.visibility_off,
-                    color: Color(0xffC9CECF),
-                  ),
                 ),
                 SizedBox(height: 8),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: [TermsAndCondtions()],
+                  children: [
+                    TermsAndCondtions(
+                      onChanged: (value) {
+                        isTermsAccepted = value;
+                      },
+                    ),
+                  ],
                 ),
                 SizedBox(height: 33),
                 CustomButton(
@@ -90,15 +93,22 @@ class _SignUpBodyState extends State<SignUpBody> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
-                      context.read<SignupCubit>().signUp(
-                        firstName,
-                        lastName,
-                        userName,
-                        phoneNumber,
-                        email,
-                        password,
-                        1,
-                      );
+                      if (isTermsAccepted) {
+                        context.read<SignupCubit>().signUp(
+                          firstName,
+                          lastName,
+                          userName,
+                          phoneNumber,
+                          email,
+                          password,
+                          1,
+                        );
+                      } else {
+                        buildErrorBar(
+                          context,
+                          'You must accept terms and conditions',
+                        );
+                      }
                     } else {
                       setState(() {
                         autovalidateMode = AutovalidateMode.always;
